@@ -1,0 +1,134 @@
+@import "utils";
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  background: $white;
+  z-index: 2;
+  align-items: center;
+  padding: 0 100px 0 15px;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.15);
+
+  @media #{slg} {
+    background: $white;
+    padding: 0 150px 0 30px;
+  }
+
+  &-categories {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    @media #{$lg} {
+      justify-content: flex-start;
+      padding: 0 2rem;
+    }
+  }
+
+  &-btn {
+    background: transparent;
+    color: #6e798c;
+    border: 0;
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    padding: 6px 16px 6px;
+    text-decoration: none;
+
+    a {
+      color: #6e798c;
+    }
+
+    &:hover {
+      background: $insight-background;
+      text-decoration: none;
+      color: #6e798c;
+    }
+
+    @media #{$lg} {
+      font-size: 0.85em;
+      margin-bottom: 0;
+      border-radius: 2rem;
+      color: #6e798c;
+    }
+
+    &.active {
+      background: rgba($pixel-pink, 0.15);
+      color: $pixel-pink;
+    }
+  }
+}
+
+.item-dropdown {
+  position: relative;
+
+  .label {
+    border: 0;
+    line-height: 100%;
+    color: $filter-grey;
+    padding: 0 2.5rem 0 1.5rem;
+    height: 35px;
+    // line-height: 35px;
+    border-radius: 2rem;
+    font-weight: bold;
+    background: $white
+      url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEgMUw2LjE2ODU0IDUuNzgyNjFMMTEgMSIgc3Ryb2tlPSIjODA4MDgwIiBzdHJva2Utd2lkdGg9IjIuMTczOTEiLz4KPC9zdmc+Cg==)
+      no-repeat center right 15px;
+    width: 210px;
+
+    // font-family: 'Opens Sans';
+    // font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 25px;
+
+    @media #{$lg} {
+      display: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background: $white;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.25rem 0;
+    box-shadow: 2px 4px 4px 0 rgba($black, 0.25);
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    li {
+      text-align: center;
+      // margin: 10px;
+    //   @media #{$lg} {
+    //     margin-right: 0.5rem;
+    //   }
+    }
+
+    @media #{$lg} {
+      display: flex;
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+      position: relative;
+      top: 0;
+      background: transparent;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}

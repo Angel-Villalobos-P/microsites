@@ -1,0 +1,128 @@
+@import "utils";
+
+.tc-cont-blackbox {
+  .list-wrapper {
+    padding: 3rem 1.5rem;
+    background-color: $white;
+    // width: 690px;
+    // height: 605px;
+
+    @media #{$md} {
+      padding: 3.5rem 3rem;
+    }
+
+    .left-text-title {
+      font-family: $serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 130%;
+      color: $black-two;
+    }
+
+    .left-text-introduction {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      color: $black-two;
+    }
+
+    .left-text-subtitle {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 29px;
+      color: $black-two;
+    }
+
+    .left-text-description {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    .box {
+      background: $black-two;
+      width: 397px;
+      height: 370px;
+      position: relative;
+
+      .box-text {
+        font-family: $sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 130%;
+        padding: 40px 44px;
+        color: $white;
+        margin-bottom: 0px;
+      }
+
+      p::after {
+        color: $pixel-pink;
+        content: attr(data-text);
+        transform: translateX(-100%);
+        position: absolute;
+      }
+
+      .cta {
+        position: absolute;
+        height: 45px;
+        width: 145px;
+        margin-left: 44px;
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+        @media #{$up-to-md} {
+          border: none;
+          margin: auto;
+        }
+      }
+
+      @media #{$up-to-sm} {
+        height: 50px;
+        width: 100%;
+        padding: 10px 38px 14px;
+        z-index: 990;
+        background: $pixel-pink;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        p {
+          display: none;
+        }
+      }
+    }
+    .box {
+      @media #{$up-to-sm} {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 70%;
+        bottom: 30%;
+      }
+    }
+  }
+
+
+  .headline {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    &-line {
+      display: inline-block;
+      width: 35px;
+      height: 6px;
+      margin-right: 1rem;
+      background-color: $pixel-pink;
+    }
+  }
+}

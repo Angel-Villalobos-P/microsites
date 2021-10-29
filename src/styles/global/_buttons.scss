@@ -1,0 +1,278 @@
+// Buttons Styles
+.btn {
+  @include button-style;
+
+  &-primary {
+    &-pink {
+      @include btnColors(
+        $pixel-pink,                // Background
+        $pixel-pink,                // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $pixel-pink,                // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-light-blue {
+      @include btnColors(
+        $light-blue,                // Background
+        $light-blue,                // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $light-blue,                // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-black {
+      @include btnColors(
+        $black,                     // Background
+        $black,                     // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $black,                     // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-orange {
+      @include btnColors(
+        $orange,                    // Background
+        $orange,                    // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $orange,                    // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-green {
+      @include btnColors(
+        $mwe-green,                 // Background
+        $mwe-green,                 // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $mwe-green,                 // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-yellow {
+      @include btnColors(
+        $lomb-yellow,               // Background
+        $lomb-yellow,               // Border
+        $white,                     // Text Color
+        transparent,                // Hover Background
+        $lomb-yellow,               // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+  }
+
+  &-secondary {
+    &-pink {
+      @include btnColors(
+        transparent,                // Background
+        $pixel-pink,                // Border
+        $pixel-pink,                // Text Color
+        $pixel-pink,                // Hover Background
+        $pixel-pink,                // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-light-blue {
+      @include btnColors(
+        transparent,                // Background
+        $light-blue,                // Border
+        $light-blue,                // Text Color
+        $light-blue,                // Hover Background
+        $light-blue,                // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-black {
+      @include btnColors(
+        transparent,                // Background
+        $black,                     // Border
+        $black,                     // Text Color
+        $black,                     // Hover Background
+        $black,                     // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-orange {
+      @include btnColors(
+        transparent,                // Background
+        $orange,                    // Border
+        $orange,                    // Text Color
+        $orange,                    // Hover Background
+        $orange,                    // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-green {
+      @include btnColors(
+        transparent,                // Background
+        $mwe-green,                 // Border
+        $mwe-green,                 // Text Color
+        $mwe-green,                 // Hover Background
+        $mwe-green,                 // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-yellow {
+      @include btnColors(
+        transparent,                // Background
+        $lomb-yellow,               // Border
+        $lomb-yellow,               // Text Color
+        $lomb-yellow,               // Hover Background
+        $lomb-yellow,               // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+  }
+
+  &-solid {
+    &-pink {
+      @include btnColors(
+        $pixel-pink,                // Background
+        $pixel-pink,                // Border
+        $white,                     // Text Color
+        lighthen($pixel-pink, 10%), // Hover Background
+        lighthen($pixel-pink, 10%), // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-light-blue {
+      @include btnColors(
+        $light-blue,                // Background
+        $light-blue,                // Border
+        $white,                     // Text Color
+        lighthen($light-blue, 10%), // Hover Background
+        lighthen($light-blue, 10%), // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-black {
+      @include btnColors(
+        $black,                     // Background
+        $black,                     // Border
+        $white,                     // Text Color
+        lighthen($black, 10%),      // Hover Background
+        lighthen($black, 10%),      // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-orange {
+      @include btnColors(
+        $orange,                    // Background
+        $orange,                    // Border
+        $white,                     // Text Color
+        darken($orange, 10%),       // Hover Background
+        darken($orange, 10%),       // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-green {
+      @include btnColors(
+        $mwe-green,                 // Background
+        $mwe-green,                 // Border
+        $white,                     // Text Color
+        lighthen($mwe-green, 10%),  // Hover Background
+        lighthen($mwe-green, 10%),  // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+
+    &-yellow {
+      @include btnColors(
+        $lomb-yellow,               // Background
+        $lomb-yellow,               // Border
+        $white,                     // Text Color
+        darken($lomb-yellow, 10%),  // Hover Background
+        darken($lomb-yellow, 10%),  // Hover Border
+        $white                      // Hover Text Color
+      );
+    }
+  }
+
+  &.black {
+    &.btn-primary {
+      &-pink {
+        @include btnColors(
+          $pixel-pink,                // Background
+          $pixel-pink,                // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $pixel-pink,                // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+
+      &-light-blue {
+        @include btnColors(
+          $light-blue,                // Background
+          $light-blue,                // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $light-blue,                // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+
+      &-black {
+        @include btnColors(
+          $black,                     // Background
+          $black,                     // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $black,                     // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+
+      &-orange {
+        @include btnColors(
+          $orange,                    // Background
+          $orange,                    // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $orange,                    // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+
+      &-green {
+        @include btnColors(
+          $mwe-green,                 // Background
+          $mwe-green,                 // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $mwe-green,                 // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+
+      &-yellow {
+        @include btnColors(
+          $lomb-yellow,               // Background
+          $lomb-yellow,               // Border
+          $white,                     // Text Color
+          transparent,                // Hover Background
+          $lomb-yellow,               // Hover Border
+          $black                      // Hover Text Color
+        );
+      }
+    }
+  }
+}

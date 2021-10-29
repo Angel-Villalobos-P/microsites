@@ -1,0 +1,21 @@
+@import "utils";
+
+.subscribe-form {
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  .float-control.form-control {
+    @media #{$md} {
+      flex: 1;
+      margin-right: 1rem;
+    }
+  }
+  .btn-subscribe {
+    @media #{$xs-only} {
+      margin-top: calc(40px - 1rem);
+      margin-bottom: 40px;
+    }
+
+    @include btn-reset;
+  }
+}

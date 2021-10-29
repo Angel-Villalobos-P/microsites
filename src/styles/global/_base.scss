@@ -1,0 +1,22 @@
+@import "utils";
+@import "global/buttons";
+
+body {
+  font-display: swap;
+  font-family: $sans;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: top .25s ease-out;
+}
+
+@media #{$xl} {
+  .scroll-back {
+    .sticky {
+      top: $header-height;
+    }
+  }
+}

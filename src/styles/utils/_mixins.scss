@@ -1,0 +1,70 @@
+// Makes an image <img> responsive
+@mixin Image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Resets <ul> tags
+@mixin ul-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Resets <button> tags
+@mixin btn-reset {
+  border: none;
+  background-color: transparent;
+}
+
+// Sets :focus styles
+@mixin focus {
+  outline: 0;
+  box-shadow: 0 0 2px 2px rgba($blue, 0.5);
+}
+
+// Sets the aspect ratio for videos
+@mixin aspect-ratio($width, $height) {
+  height: 1px;
+  padding-top: 0;
+  padding-bottom: ($height / $width) * 100%;
+}
+
+// Button Base Style
+@mixin button-style {
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s ease;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px 2px $light-blue;
+  }
+}
+
+// Colors for Buttons
+@mixin btnColors($bg, $border, $text, $hoverBg, $hoverBorder, $hoverText) {
+  background: $bg;
+  border: 2px solid $border;
+  color: $text;
+
+  &:hover {
+    background: $hoverBg;
+    border: 2px solid $hoverBorder;
+    color: $hoverText;
+  }
+}

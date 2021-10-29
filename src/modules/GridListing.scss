@@ -1,0 +1,107 @@
+@import "utils";
+$grid-listing-bg: #f6f6f6;
+
+.grid-listing {
+  position: relative;
+  // background-color: $grid-listing-bg;
+  background-color: $white;
+  padding-top: 100px;
+  padding-bottom: calc(100px - 2.6rem);
+  letter-spacing: 0.04rem;
+
+  @media #{$md} {
+    padding-top: 165px;
+    padding-bottom: calc(165px - 2.6rem);
+  }
+
+  .squares-wrapper {
+    top: 27px;
+    position: absolute;
+    left: auto;
+    right: 5px;
+  }
+
+  .headline-decoration {
+    width: 35px;
+    border: 6px solid $black;
+  }
+
+  .title {
+    font-size: 40px;
+    text-align: center;
+
+    @media #{$md} {
+      text-align: left;
+      font-size: 56px;
+      line-height: 73px;
+      margin-bottom: 4.5rem;
+      max-width: 70%;
+    }
+
+    @media #{$up-to-md} {
+      font-size: 26px;
+      line-height: 130%;
+    }
+  }
+
+  .topText {
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    width: 550px;
+    margin-bottom: 62px;
+
+    @media #{$up-to-md} {
+      font-size: 16px;
+      width: auto;
+    }
+  }
+
+  .bottomText {
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    width: 813px;
+    text-align: center;
+  }
+
+  .grid-item {
+    margin-bottom: 2.6rem;
+
+    &__index {
+      font-size: 40px;
+      line-height: 46px;
+      font-weight: bold;
+      padding-bottom: 1.3rem;
+      border-bottom: 1px solid;
+
+      @media #{$lg} {
+        font-size: 80px;
+        line-height: 92px;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 31px;
+      padding: 1.1rem 0;
+      color: $black-two;
+
+      @media #{$lg} {
+        font-size: 32px;
+        line-height: 42px;
+      }
+    }
+
+    &__description {
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      color: $dark-grey;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Bodoni';
+  src: url('Bodoni/Bodoni.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-weight: 900;
+  src: url('Bodoni/Bodoni-Black.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: italic;
+  font-weight: 900;
+  src: url('Bodoni/Bodoni-BlackItalic.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-weight: bold;
+  src: url('Bodoni/Bodoni-Bold.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: italic;
+  font-weight: bold;
+  src: url('Bodoni/Bodoni-BoldItalic.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  font-style: italic;
+  src: url('Bodoni/Bodoni-Italic.woff');
+  font-display: swap;
+}

@@ -1,0 +1,94 @@
+@import "utils";
+
+.testimony-block {
+  background: $pixel-grey;
+  padding: 100px 105px;
+
+  @media #{up-to-sm, $up-to-md} {
+    padding: 22px;
+  }
+
+  .headline {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    &-line {
+      display: inline-block;
+      width: 35px;
+      height: 6px;
+      margin-right: 1rem;
+      background-color: $pixel-pink;
+    }
+  }
+
+  .wrapper {
+    // width: 397px;
+    padding: 134px 105px;
+
+    @media #{up-to-sm, $up-to-md} {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 130%;
+
+      padding: 0px;
+    }
+
+    .title {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 130%;
+      padding-bottom: 40px;
+
+      @media #{up-to-sm, $up-to-md} {
+        font-family: $sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 130%;
+
+        padding: 0px;
+      }
+    }
+
+    .text {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .testimony {
+    border-left: 2px solid $pixel-pink;
+    padding-left: 32px;
+    font-family: $serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 150%;
+
+    @media #{up-to-sm, $up-to-md} {
+      font-family: $serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 150%;
+    }
+
+    // span {
+    //   font-family: $sans;
+    //   font-style: normal;
+    //   font-weight: bold;
+    //   font-size: 24px;
+    //   line-height: 31px;
+    // }
+  }
+}

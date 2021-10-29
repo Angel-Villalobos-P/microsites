@@ -1,0 +1,225 @@
+@import "utils";
+$copyright-border-color: #404040;
+$desktop-links-color: #a4a4a4;
+
+footer {
+  overflow: hidden;
+  background-color: $black-two;
+  padding: 60px 20px 0;
+
+  @media #{$md} {
+    padding: 80px 25px 0;
+  }
+
+  @media #{$lg} {
+    padding: 80px 65px 0;
+  }
+
+  .subscribe {
+    &-title {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      @media #{$xs-only} {
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 25px;
+      }
+    }
+
+    &-form {
+      color: $white;
+
+      @media #{$sm} {
+        display: flex;
+        align-items: center;
+      }
+
+      .float-control {
+        position: relative;
+        margin-right: 16px; //<--
+
+        &.is-dirty {
+          & label.show,
+          & label {
+            border-radius: 4px;
+            font-size: 14px;
+            opacity: 0.8;
+
+            @media #{md} {
+              font-size: 18px;
+            }
+
+            left: 1px;
+            padding: 0 0.15em;
+            font-weight: bold;
+            text-transform: uppercase;
+            top: -5px;
+          }
+        }
+
+        label {
+          font-size: 18px;
+
+          @media #{$md} {
+            font-size: 24px;
+          }
+
+          @media #{$lg} {
+            // font-size: 32px;
+            font-size: 24px;
+          }
+
+          font-weight: normal;
+          left: 1px;
+          position: absolute;
+          top: auto;
+          bottom: 10px;
+          margin-bottom: 0;
+          color: $white;
+          z-index: 1;
+          transition: top, left, font-size 0.2s linear;
+          &.file {
+            position: relative;
+            left: 0;
+            width: 100%;
+            padding: 0.75em 0.5em 0.5em;
+            border-bottom: 1px solid $black;
+            cursor: pointer;
+          }
+        }
+        input {
+          position: relative;
+          color: $black;
+          border: none;
+          border-bottom: 1px solid $black;
+          font-size: 18px;
+
+          &.dark-bg {
+            color: $white;
+            border-color: $white;
+          }
+
+          @media #{md} {
+            font-size: 32px;
+          }
+
+          padding: 0.75em 1px 0.5em;
+          width: 100%;
+          z-index: 2;
+          background: transparent;
+          &:focus + label,
+          & + label.show {
+            border-radius: 4px;
+            color: $white;
+            font-size: 14px;
+
+            @media #{md} {
+              font-size: 18px;
+            }
+
+            left: 1px;
+            padding: 0 0.15em;
+            font-weight: bold;
+            text-transform: uppercase;
+            top: -5px;
+          }
+          &[type="file"] {
+            display: none;
+          }
+        }
+      }
+
+      .btn-subscribe {
+        @include btnColors(
+          $black-two,
+          $pixel-pink,
+          $white,
+          $pixel-pink,
+          $pixel-pink,
+          $white
+        );
+      }
+    }
+  }
+
+  .info-details {
+    color: $white;
+    font-weight: bold;
+    @media #{$xs-only} {
+      text-align: center;
+    }
+  }
+
+  .social-links {
+    @include ul-reset;
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$xs-only} {
+      margin: 50px 0;
+    }
+
+    &__item {
+      display: inline-block;
+
+      @media #{$md} {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  .nav-links {
+    @include ul-reset;
+
+    &__item {
+      display: inline-block;
+      a {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 23px;
+        color: $desktop-links-color;
+        text-decoration: none;
+
+        @media #{$lg} {
+          font-size: 18px;
+        }
+      }
+      &.active {
+        a {
+          color: $pixel-pink;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $white;
+    text-align: center;
+    text-transform: lowercase;
+    position: relative;
+    padding-top: 1rem;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 150vw;
+      left: -50%;
+      top: 0;
+      background-color: $copyright-border-color;
+    }
+  }
+
+  .mobile-nav {
+    @include ul-reset;
+    text-align: center;
+    padding-top: 1rem;
+
+    .nav-links__item {
+      display: block;
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

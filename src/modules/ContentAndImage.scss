@@ -1,0 +1,85 @@
+@import "utils";
+
+.content-img {
+  position: relative;
+  padding: 3rem 1rem;
+
+  @media #{$md} {
+    padding: 4.5rem 2rem;
+    // padding: 100px 105px;
+  }
+  &.black {
+    background-color: $black-two;
+  }
+
+  .headline {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    &-line {
+      display: inline-block;
+      width: 35px;
+      height: 6px;
+      margin-right: 1rem;
+    }
+  }
+
+  .main-title {
+    font-family: $sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 150%;
+    @media #{$md} {
+      font-size: 42px;
+      line-height: 130%;
+    }
+  }
+
+  .text-block {
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 150%;
+    strong {
+      font-weight: bold;
+    }
+
+    @media #{$md} {
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 300;
+    }
+  }
+
+  .edge-wrapper,
+  .overlap-above-wrapper {
+    position: initial;
+  }
+
+  .image {
+    @include Image;
+    width: 100vw;
+
+    @media #{$xs-only} {
+      &.edge {
+        transform: translateX(-1.5rem);
+      }
+    }
+
+    @media #{$lg} {
+      &.overlap-above {
+        transform: translateY(-8rem);
+      }
+
+      &.edge {
+        position: absolute;
+        left: -10px;
+        top: auto;
+      }
+    }
+  }
+}

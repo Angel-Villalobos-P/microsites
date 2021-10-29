@@ -1,0 +1,126 @@
+@import "utils";
+
+.tc-cont-list {
+  
+  .list-wrapper {
+    padding: 3rem 1.5rem;
+    background-color: $black-two;
+    height: 743px;
+
+    @media #{$up-to-md} {
+      padding: 10px 20px 75px;
+      height: auto;
+    }
+
+    .list-title,
+    .list-description,
+    .left-text-title,
+    .left-text {
+      color: $white;
+    }
+
+    .left-text {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+      // padding-left: 93px;
+      // margin: 36px 0px;
+      margin: 18px 0px;
+      @media #{$up-to-md} {
+        font-size: 26px;
+        line-height: 130%;
+        padding: 12px 20px 12px;
+      }
+    }
+
+    // .btn {
+    //   margin-left: 93px;
+    // }
+
+    .left-text-title {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 130%;
+      // padding-left: 93px;
+      // padding-bottom: 18px;
+      margin-bottom: 16px;
+      @media #{$up-to-md} {
+        font-size: 26px;
+        line-height: 130%;
+        padding: 12px 20px 20px;
+      }
+    }
+
+    .list-title {
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+    }
+    .subtitle {
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      color: $white;
+    }
+
+    .list-number {
+      display: inline-block;
+      color: $orange;
+      font-weight: bold;
+      border-bottom: 1px solid $white;
+      padding: 0 5px 15px;
+      font-size: 24px;
+      line-height: 28px;
+      @media #{$md} {
+        font-size: 40px;
+        line-height: 46px;
+      }
+    }
+
+    .list-description {
+      font-size: 1.2rem;
+    }
+
+    .right-description {
+      color: $white;
+      width: 522px;
+      //   height: 135px;
+      padding: 0 25px 15px;
+      font-family: $sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    .headline {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      &-line {
+        display: inline-block;
+        width: 35px;
+        height: 6px;
+        margin-right: 1rem;
+        background-color: $pixel-pink;
+      }
+    }
+  }
+
+  .left-wrapper {
+    @media #{$md} {
+      padding: 124px 89px 251px 105px;
+    }
+  }
+  .right-wrapper {
+    padding: 119px 9px 119.5px;
+  }
+}

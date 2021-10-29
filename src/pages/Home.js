@@ -1,15 +1,3 @@
-// import React from "react"
-// import Layout from "../components/layout"
-// import Home from "."
-
-// const IndexPage = () => (
-//   <Layout>
-//     <Home />
-//   </Layout>
-// )
-
-// export default IndexPage
-
 import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import ClientsAndPartners from "../modules/ClientsAndPartners"
@@ -19,7 +7,7 @@ import GridListing from "../modules/GridListing"
 import Hero from "../modules/Hero"
 import TwoColumnsLeftListAndImage from "../modules/TwoColumnsLeftListAndImage"
 
-const IndexPage = () => {
+const Home = (props) => {
   const [content, setContent] = useState({})
 
   useEffect(() => {
@@ -44,4 +32,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Home

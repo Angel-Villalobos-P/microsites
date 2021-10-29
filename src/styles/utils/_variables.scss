@@ -1,0 +1,70 @@
+// Colors
+$white: #fff;
+$black: #000;
+$black-two: #1c1c1c;
+$grey: #c6c6c6;
+$pixel-grey: #F4F4F4;
+$grey-two: #7a7a7a;
+$dark-grey: #525252;
+$darker-grey: #353535;
+$pixel-pink: #e12a5c;
+$light-blue: #00acd8;
+$orange: #ffa040;
+$mwe-green: #14aea1;
+$lomb-yellow: #dfa833;
+$light-grey: #f7f7f7;
+$insight-background: #f7f7f7;
+$filter-grey: #808080;
+$filter-text-grey: #737070;
+$whiteish-grey: #aeaeae;
+
+// Fonts
+$sans: "Sarabun", sans-serif;
+$serif: "Bodoni", serif;
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$xs: "only screen and (min-width: 0px)";
+$sm: "only screen and (min-width: 576px)";
+$md: "only screen and (min-width: 768px)";
+$lg: "only screen and (min-width: 992px)";
+$xl: "only screen and (min-width: 1200px)";
+
+$xs-only: "only screen and (max-width: 575px)";
+$sm-only: "only screen and (min-width: 576px) and (max-width: 767px)";
+$md-only: "only screen and (min-width: 768px) and (max-width: 991px)";
+$lg-only: "only screen and (min-width: 992px) and (max-width: 1199px)";
+
+$up-to-sm: "only screen and (max-width: 767px)";
+$up-to-md: "only screen and (max-width: 991px)";
+$up-to-lg: "only screen and (max-width: 1199px)";
+
+$sm-to-lg: "only screen and (min-width: 576px) and (max-width: 1199px)";
+$sm-to-xl: "only screen and (min-width: 576px) and (max-width: 1199px)";
+$md-to-xl: "only screen and (min-width: 768px) and (max-width: 1199px)";
+
+$sm-portrait: "only screen and (min-device-width : 576px) and (max-device-width : 767px) and (orientation : portrait)";
+$sm-landscape: "only screen and (min-device-width : 575px) and (max-device-width : 767px) and (orientation : landscape)";
+$md-portrait: "only screen and (min-device-width : 768px) and (max-device-width : 991px) and (orientation : portrait)";
+$md-landscape: "only screen and (min-device-width : 768px) and (max-device-width : 991px) and (orientation : landscape)";
+
+// Alignment
+$text-alignment: left, center, right;
+
+// Positions
+$positions: static, relative, absolute, sticky;
+
+// Text Transforms
+$transforms: capitalize, lowercase, uppercase;
+
+// Font weight
+$font-weights: bold, bolder, normal, lighter;
+
+$header-height: 56px;

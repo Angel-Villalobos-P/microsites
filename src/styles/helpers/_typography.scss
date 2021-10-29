@@ -1,0 +1,38 @@
+// Text alignment
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $value in $text-alignment {
+      &.text#{$infix}-#{$value} {
+        text-align: $value;
+      }
+    }
+  }
+}
+
+// Text transform
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $value in $transforms {
+      &.text#{$infix}-#{$value} {
+        text-transform: $value;
+      }
+    }
+  }
+}
+
+// Font weights
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $value in $font-weights {
+      &.font#{$infix}-#{$value} {
+        font-weight: $value;
+      }
+    }
+  }
+}
