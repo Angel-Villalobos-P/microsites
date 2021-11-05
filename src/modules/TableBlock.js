@@ -74,11 +74,11 @@ const TableBlock = ({ item }) => {
     <section className="table-block">
       <div className="container">
         <div className="row header-wrapper">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             {columns?.length > 1 ? <span className="headline-line" /> : null}
             <h1 className="title">{customFields?.title}</h1>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <p className="text">{customFields?.text}</p>
           </div>
         </div>

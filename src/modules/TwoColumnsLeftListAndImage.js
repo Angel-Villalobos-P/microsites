@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import "./TwoColumnsLeftListAndImage.scss"
 
 const TwoColumnsLeftListAndImage = ({ item }) => {
-    const customFields = item !== undefined ? item.item.fields : null
+  const customFields = item !== undefined ? item.item.fields : null
   const listItems = customFields?.listItems
 
   const CTA = () => {
@@ -14,7 +14,7 @@ const TwoColumnsLeftListAndImage = ({ item }) => {
     if (customFields?.cTALink && customFields?.cTALink?.href) {
       return (
         <Link
-          className={`btn ${buttonStyleClass}`}
+          className={`btn ${buttonStyleClass} mb-5`}
           to={customFields?.cTALink?.href}
         >
           {customFields?.cTALink?.text}
@@ -42,7 +42,7 @@ const TwoColumnsLeftListAndImage = ({ item }) => {
                   })}
                 </ul>
               ) : null}
-              <CTA />
+              {/* <CTA /> */}
             </div>
           </div>
           <div className="col-12 col-md-6">
@@ -60,6 +60,11 @@ const TwoColumnsLeftListAndImage = ({ item }) => {
                 />
               )}
             </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 d-flex justify-content-center m-100">
+            <CTA />
           </div>
         </div>
       </div>

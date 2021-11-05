@@ -22,7 +22,8 @@ const EnterpriseSocialMediaAds = () => {
       {content && <MicrositeNavbar item={content?.zones?.MainContentZone[1]} />}
       {content && <TwoColumnsAndBlackbox item={content?.zones?.MainContentZone[2]} />}
       {content && <TwoColumnsLeftContent item={content?.zones?.MainContentZone[3]} />}
-      {content && <CTAFooter item={content?.zones?.MainContentZone[4]} />}
+      {content && <TableBlock item={content?.zones?.MainContentZone[4]} />}
+      {content && <CTAFooter item={content?.zones?.MainContentZone[5]} />}
     </Layout>
   )
 }

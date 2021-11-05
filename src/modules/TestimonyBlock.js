@@ -75,19 +75,24 @@ const TestimonyBlock = ({ item }) => {
     <section className="testimony-block">
       <div className="container-fluid px-0">
         <div className="row">
-          <div className="col-6 col-md-6 col-sm-12">
+          <div className="col-6 col-md-6 col-sm-12 col-12">
             <div className="wrapper">
               <span className="headline-line" />
               <h2 className="title">{customFields?.title}</h2>
               <p className="text">{customFields?.text}</p>
-              <CTA />
+              {/* <CTA /> */}
             </div>
           </div>
-          <div className="col-6 col-md-6 col-sm-12">
+          <div className="col-6 col-md-6 col-sm-12 col-12">
             <div
               className="testimony"
               dangerouslySetInnerHTML={renderHTML(customFields?.testimony)}
             />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+          <CTA />
           </div>
         </div>
       </div>

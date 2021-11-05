@@ -57,6 +57,12 @@ const GlobalMicrositeHeader = () => {
                   <Link to="/contact-us">- Contact info</Link>
                   <Link to="/contact-us">- About us</Link>
                   <Link to="/careers">- Careers</Link>
+                  <Link className="movil" to="/ppc-plans">
+                    - PPC Plans
+                  </Link>
+                  <Link className="movil" to="/seo-services-plans">
+                    - SEO PPC
+                  </Link>
                 </div>
               </div>
             </li>

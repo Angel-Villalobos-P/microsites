@@ -25,7 +25,8 @@
 
   .wrapper {
     // width: 397px;
-    padding: 134px 105px;
+    // padding: 134px 105px;
+    padding-top: 134px;
 
     @media #{up-to-sm, $up-to-md} {
       font-family: $sans;
@@ -63,6 +64,7 @@
       font-size: 18px;
       line-height: 150%;
       margin-bottom: 40px;
+
     }
   }
 
@@ -91,4 +93,5 @@
     //   line-height: 31px;
     // }
   }
+  
 }

@@ -34,6 +34,10 @@
       font-weight: bold;
       font-size: 18px;
       line-height: 18px;
+
+      @media #{$up-to-sm} {
+        display: none;
+      }
     }
   }
 
@@ -55,6 +59,10 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 18px;
+
+    @media #{$up-to-sm} {
+      padding: 0;
+    }
 
     &::after {
       content: "⌄";
@@ -87,6 +95,17 @@
       padding: 32px 32px 40px;
       width: 186px;
       align-items: flex-start;
+      .movil {
+        display: none;
+      }
+
+      @media #{$up-to-sm} {
+        padding: 4px;
+        min-width: auto;
+        .movil {
+          display: block;
+        }
+      }
 
       a {
         color: black;
@@ -100,6 +119,9 @@
         font-weight: 800;
         font-size: 16px;
         line-height: 21px;
+        @media #{$up-to-sm} {
+          padding: 10px;
+        }
       }
 
       &:hover {

@@ -69,6 +69,8 @@ const GridListing = ({ item }) => {
   }
 
   const GridItem = ({ props }) => {
+
+    console.log(props, ">---");
     return (
       <div className={"col-12 col-sm-6 col-md-4 col-lg-3 grid-item"}>
         <p
