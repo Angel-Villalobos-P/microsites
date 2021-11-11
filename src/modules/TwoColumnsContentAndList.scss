@@ -1,7 +1,6 @@
 @import "utils";
 
 .tc-cont-list {
-  
   .list-wrapper {
     padding: 3rem 1.5rem;
     background-color: $black-two;
@@ -36,9 +35,11 @@
       }
     }
 
-    // .btn {
-    //   margin-left: 93px;
-    // }
+    .hidden-mobile {
+      @media #{$up-to-md} {
+        display: none;
+      }
+    }
 
     .left-text-title {
       font-family: $sans;
@@ -137,6 +138,13 @@
     @media #{$up-to-md} {
       padding-top: 12px;
       padding-bottom: 25px;
+    }
+  }
+
+  .cta-list {
+    background: $black-two;
+    @media #{$lg} {
+      display: none;
     }
   }
 }

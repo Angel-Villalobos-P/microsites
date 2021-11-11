@@ -77,7 +77,9 @@ const TwoColumnsContentAndList = ({ item }) => {
                 className="left-text"
                 dangerouslySetInnerHTML={renderHTML(customFields?.text)}
               />
-              {/* <CTA /> */}
+              <div className="hidden-mobile">
+                <CTA />
+              </div>
             </div>
           </div>
           <div className="col-12 col-md-6 p-0">
@@ -87,25 +89,41 @@ const TwoColumnsContentAndList = ({ item }) => {
                   <p className="subtitle">{customFields?.subtitle}</p>
                 </div>
               </div>
-              <div className="row" >
+              <div className="row">
                 <ListItems items={formattedItems} />
               </div>
-              <div className="row">
-                {/* <div className="col-2 col-sm-8 mb-2 mb-sm-4 text-left"> */}
+              {customFields?.description && (
+                <div className="row">
+                  <div className="col-12 col-md-6">
+                    <p className="right-description">
+                      {customFields?.description}
+                    </p>
+                  </div>
+                </div>
+              )}
+              {/* <div className="row">
                 <div className="col-12 col-md-6">
                   <p className="right-description">
                     {customFields?.description}
                   </p>
                 </div>
-              </div>
-              <div className="row">
+              </div> */}
+              {/* <div className="row">
                 <div className="col-12 m-4 m-md-0">
                   <CTA />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
+          <div className="col-12 m-0 p-4 cta-list">
+            <CTA />
+          </div>
         </div>
+        {/* <div className="row">
+          <div className="col-12 m-4 m-md-0">
+            <CTA />
+          </div>
+        </div> */}
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ const GridListing = ({ item }) => {
   const customFields = item !== undefined ? item.item.fields : null
   const moduleColor = customFields?.moduleColor?.fields?.hexadecimalValue
   const topText = customFields?.topText ? customFields?.topText : null
-  const bottomText = customFields?.buttomText ? customFields?.topText : null
+  const bottomText = customFields?.buttomText ? customFields?.buttomText : null
 
   const items = customFields?.listItems?.map((item, key) => {
     const humanIndex = key + 1
@@ -69,10 +69,13 @@ const GridListing = ({ item }) => {
   }
 
   const GridItem = ({ props }) => {
+    const lgClass = items.length > 4 ? "" : "col-lg-3"
 
-    console.log(props, ">---");
+    console.log(items.length>4);
+
     return (
-      <div className={"col-12 col-sm-6 col-md-4 col-lg-3 grid-item"}>
+      // <div className={"col-12 col-sm-6 col-md-4 col-lg-3 grid-item"}>
+      <div className={`col-12 col-sm-6 col-md-4 ${lgClass} grid-item`}>
         <p
           className="grid-item__index"
           style={{ color: props.color, borderColor: props.color }}

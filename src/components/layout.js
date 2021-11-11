@@ -7,7 +7,7 @@ import GlobalMicrositeFooter from "./GlobalMicrositeFooter"
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="pixel506">
+      <div className="pixel506" style={{"overflowX":"hidden"}}>
         <GlobalMicrositeHeader />
         <main>{children}</main>
         <GlobalMicrositeFooter/>

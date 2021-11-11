@@ -56,11 +56,15 @@
 
     ul {
       li {
+        list-style: none;
         font-family: $sans;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         line-height: 200%;
+      }
+      li:before {
+        content: "- ";
       }
     }
 

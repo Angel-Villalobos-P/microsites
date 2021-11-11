@@ -52,16 +52,16 @@ const GlobalMicrositeHeader = () => {
               <div className="dropdown">
                 <button className="item-list-name">Who we are</button>
                 <div className="dropdown-content">
-                  <Link to="/insights">- Content library</Link>
-                  <Link to="#">- Reviews</Link>
-                  <Link to="/contact-us">- Contact info</Link>
-                  <Link to="/contact-us">- About us</Link>
-                  <Link to="/careers">- Careers</Link>
+                  <Link to="/insights">Content library</Link>
+                  <Link to="#">Reviews</Link>
+                  <Link to="/contact-us">Contact info</Link>
+                  <Link to="/contact-us">About us</Link>
+                  <Link to="/careers">Careers</Link>
                   <Link className="movil" to="/ppc-plans">
-                    - PPC Plans
+                    PPC Plans
                   </Link>
                   <Link className="movil" to="/seo-services-plans">
-                    - SEO PPC
+                    SEO PPC
                   </Link>
                 </div>
               </div>
