@@ -6,6 +6,9 @@
   padding: auto;
 
   .table-sm {
+    position: relative;
+    overflow: auto;
+    max-width: auto;
     @media #{$up-to-md} {
       position: relative;
       overflow: auto;
@@ -75,7 +78,7 @@
       font-family: $sans;
       font-style: normal;
       font-weight: normal;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 25px;
       text-transform: uppercase;
       padding: 30px;

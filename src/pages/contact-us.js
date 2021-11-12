@@ -16,12 +16,13 @@ const EnterpriseSocialMediaAds = () => {
 
   return (
     <Layout>
-      {content && <Hero item={content?.zones?.MainContentZone[0]} />}
+      <p>text</p>
+      {/* {content && <Hero item={content?.zones?.MainContentZone[0]} />}
       {content && <MicrositeNavbar item={content?.zones?.MainContentZone[1]} />}
       {content && <TwoColumnsAndBlackbox item={content?.zones?.MainContentZone[2]} />}
       {content && <TwoColumnsLeftContent item={content?.zones?.MainContentZone[3]} />}
       {content && <TableBlock item={content?.zones?.MainContentZone[4]} />}
-      {content && <CTAFooter item={content?.zones?.MainContentZone[5]} />}
+      {content && <CTAFooter item={content?.zones?.MainContentZone[5]} />} */}
     </Layout>
   )
 }
