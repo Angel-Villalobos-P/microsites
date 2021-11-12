@@ -65,7 +65,7 @@
     }
 
     &::after {
-      content: "⌄";
+      content: "∨"; //"\2228"
       text-align: center;
       padding: 8px 1px 12px 9px;
       position: static;
@@ -73,7 +73,7 @@
       right: 5%;
       top: 10%;
       bottom: 0%;
-      font-size: 28px;
+      font-size: 20px;
     }
     &:focus {
       outline: none;

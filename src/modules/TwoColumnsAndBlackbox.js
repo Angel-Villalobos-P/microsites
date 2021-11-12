@@ -16,26 +16,34 @@ const TwoColumnsAndBlackbox = ({ item }) => {
       // >
       //   {customFields?.cTALink.text}
       // </Link>
-      <a className={`btn ${buttonStyleClass}`} href={customFields?.cTALink.href}> {customFields?.cTALink.text}</a>
+      <a
+        className={`btn ${buttonStyleClass}`}
+        href={customFields?.cTALink.href}
+      >
+        {" "}
+        {customFields?.cTALink.text}
+      </a>
     )
   }
   const BoxCTA = () => {
     const boxButtonStyleClass = customFields?.boxButtonStyle?.fields.cSSClass
 
+    const handleScrollToPlans = () => {
+      if (typeof window === `undefined`) return
+      if (document.querySelector(".table-block")) {
+        window.scrollTo({
+          top: document.querySelector(".table-block").offsetTop,
+          behavior: "smooth",
+        })
+      }
+    }
+
     return (
-      // <Link
-      //   className={`btn ${boxButtonStyleClass}`}
-      //   to={customFields.cTAPlansLink.href}
-      // >
-      //   {customFields.cTAPlansLink.text}
-      // </Link>
-      <button className={`btn ${boxButtonStyleClass} cta`}>
-        <Link
-          // className={`btn ${boxButtonStyleClass}`}
-          to={customFields.cTAPlansLink.href}
-        >
-          {customFields.cTAPlansLink.text}
-        </Link>
+      <button
+        className={`btn ${boxButtonStyleClass} cta`}
+        onClick={handleScrollToPlans}
+      >
+        {customFields.cTAPlansLink.text}
       </button>
     )
   }

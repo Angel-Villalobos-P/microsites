@@ -11,6 +11,9 @@
   &.black {
     background-color: $black-two;
   }
+  &.grey {
+    background: $pixel-grey;
+  }
 
   .headline {
     font-size: 14px;

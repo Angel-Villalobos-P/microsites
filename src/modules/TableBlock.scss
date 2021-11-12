@@ -2,9 +2,11 @@
 
 .table-block {
   background: $pixel-grey;
+  overflow-y: auto;
+  padding: auto;
 
   .table-sm {
-    @media #{$up-to-sm, $up-to-md} {
+    @media #{$up-to-md} {
       position: relative;
       overflow: auto;
       //   white-space: nowrap;
