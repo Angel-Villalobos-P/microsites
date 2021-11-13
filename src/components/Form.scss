@@ -1,0 +1,300 @@
+@import "utils";
+
+.px-form {
+  padding: 0 10px;
+  max-width: 660px;
+  margin: 0 auto;
+
+  &.submitted {
+    input,
+    textarea,
+    select {
+      &:required:invalid {
+        outline: none;
+        box-shadow: 0 2px 0 0 red;
+
+        + label {
+          color: red;
+        }
+      }
+    }
+  }
+
+  &-group,
+  &-options,
+  &-select,
+  &-file {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  &-group,
+  &-file {
+    position: relative;
+
+    input,
+    label {
+      padding: 0;
+      height: 40px;
+      line-height: 40px;
+      transition: all 0.4s ease;
+      font-size: 20px;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      color: $dark-grey;
+      font-weight: 300;
+    }
+
+    input,
+    textarea {
+      border: 0;
+      border-bottom: 1px solid $grey;
+
+      &:focus,
+      &.is-dirty {
+        + label {
+          top: -20px;
+          font-size: 14px;
+          line-height: 10px;
+        }
+      }
+
+      &.is-dirty {
+        &:invalid {
+          border-color: $pixel-pink;
+          box-shadow: none;
+
+          + label {
+            color: $pixel-pink;
+          }
+        }
+      }
+
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 2px 0 0 $light-blue;
+      }
+    }
+  }
+
+  &-file {
+    label {
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    input {
+      background-color: $white;
+      line-height: 1px;
+      color: $white;
+      cursor: pointer;
+
+      &:focus,
+      &.is-dirty {
+        + label {
+          cursor: default;
+        }
+      }
+    }
+
+    &-name {
+      position: absolute;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      background-color: $white;
+      top: 0;
+      left: 0;
+      font-size: 20px;
+      width: 100%;
+      pointer-events: none;
+      z-index: 0;
+      border-bottom: 1px solid $grey;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &-options {
+    fieldset {
+      legend {
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: $black-two;
+      }
+    }
+  }
+
+  &-checkbox,
+  &-radio {
+    position: relative;
+    padding: 0.5rem 0;
+
+    label {
+      display: flex;
+      font-size: 18px;
+      line-height: 25px;
+      margin: 0;
+      padding: 0;
+      color: $dark-grey;
+
+      &:before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+    }
+
+    input {
+      z-index: -1;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      opacity: 0;
+
+      &:focus {
+        + label {
+          &::before {
+            box-shadow: 0 0 0 2px $light-blue;
+          }
+        }
+      }
+    }
+  }
+
+  &-checkbox {
+    label {
+      &::before {
+        border-radius: 6px;
+        border: 2px solid $black-two;
+        background-color: $white;
+      }
+    }
+
+    input {
+      &:checked {
+        + label {
+          &:before {
+            background-color: $black-two;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMSAyMSI+Cjxwb2x5Z29uIGZpbGw9IiNmZmZmZmYiIHBvaW50cz0iMjAuNiw0LjkgMTguNSwyLjggNy40LDE0IDIuNSw5LjEgMC40LDExLjIgNy40LDE4LjIgOS41LDE2LjEgOS41LDE2LjEgIi8+Cjwvc3ZnPg==);
+            background-position: center;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  &-radio {
+    label {
+      &::before {
+        border-radius: 50%;
+        border: 2px solid $black-two;
+        background-color: $white;
+      }
+    }
+
+    input {
+      &:checked {
+        + label {
+          &::before {
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 5px $white;
+            background-color: $black-two;
+          }
+        }
+      }
+    }
+  }
+
+  &-select {
+    position: relative;
+    flex-direction: column-reverse;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      color: $dark-grey;
+      font-weight: 300;
+      height: 40px;
+      line-height: 40px;
+      transition: all 0.4s ease;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+    }
+
+    select {
+      appearance: none;
+      background-color: $white;
+      border: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      border-bottom: 1px solid $grey;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCAyNSI+CjxwYXRoIGZpbGw9IiM1MjUyNTIiIGQ9Ik0wIDcuMzNMMi44MjkgNC41bDkuMTc1IDkuMzM5TDIxLjE3MSA0LjUgMjQgNy4zMyAxMi4wMDQgMTkuNXoiLz4KPC9zdmc+);
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      background-position: right 15px;
+      cursor: pointer;
+      height: 40px;
+      line-height: 40px;
+
+      @media #{$md} {
+        font-size: 24px;
+      }
+
+      &.is-dirty {
+        + label {
+          top: -20px;
+          font-size: 14px;
+          line-height: 10px;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 2px 0 0 $light-blue;
+      }
+    }
+  }
+
+  &-submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &.small {
+    .px-form-group {
+      margin-bottom: 1.5rem;
+      label {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

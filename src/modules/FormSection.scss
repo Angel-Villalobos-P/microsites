@@ -1,0 +1,53 @@
+@import "utils";
+
+.form-section {
+  padding: 3rem 1rem;
+
+  @media #{$md} {
+    padding: 4.5rem 2rem;
+  }
+
+  &-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 35px;
+    padding-bottom: 2rem;
+    .wrapper {
+      position: relative;
+
+      span {
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: 100%;
+        width: 35px;
+        height: 9px;
+      }
+    }
+
+    @media #{$md} {
+      font-size: 3.5em;
+    }
+  }
+  // .hs-form {
+  //   border: 2px solid red;
+  //   background: blue;
+  // }
+  // .form-testing{
+  //   border: 2px solid red;
+  //   background: blue;
+  // }
+  // .hbspt-form{
+  //   border: 2px solid red;
+  //   background: blue;
+  // }
+
+  .hs-form-iframe {
+    .hbspt-form {
+      .hs-form {
+        border: 2px solid red;
+        background: blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "utils";
+
+.img-info-square {
+  padding: 5rem 0;
+  background: $grey;
+
+  @media #{$md} {
+    padding: 5rem 0 calc(5rem + 55px);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    .info-square {
+      padding: 2.5rem;
+      background-color: $black-two;
+      @media #{$md} {
+        transform: translateY(55px);
+        max-width: 90%;
+      }
+
+      @media #{$lg} {
+        max-width: 70%;
+      }
+
+      .title,
+      .text-block,
+      .cta-headline {
+        color: $white;
+      }
+
+      .title {
+        font-family: "Bodoni", serif;
+        font-size: 3em;
+        line-height: 115%;
+        @media #{$md} {
+          font-size: 112px;
+          line-height: 120%;
+        }
+      }
+
+      .cta-headline {
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        margin-top: 1rem;
+
+        @media #{$md} {
+          margin: 2rem 0;
+          font-size: 24px;
+          line-height: 31px;
+        }
+      }
+
+      .social {
+        padding: 0;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+        text-align: right;
+        color: $white;
+        &-links {
+          @include ul-reset;
+          text-align: right;
+          &__item {
+            display: inline-block;
+            margin: 0 0 0 1rem;
+            a {
+              height: 100%;
+              display: block;
+              svg {
+                fill: $white;
+              }
+              &:hover {
+                svg {
+                  fill: $pixel-pink;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-borders {
+      display: none;
+      position: absolute;
+      height: 60%;
+      max-width: 140px;
+      top: auto;
+      left: -10px;
+      bottom: -10px;
+      border: 1px solid;
+      border-top-style: solid;
+      border-right-style: solid;
+      width: 100%;
+      border-top-style: none;
+      border-right-style: none;
+      z-index: -1;
+      @media #{$md} {
+        display: block;
+        max-width: 420px;
+        left: 0;
+        bottom: 150px;
+      }
+      @media #{$lg} {
+        bottom: -15px;
+      }
+    }
+  }
+}
