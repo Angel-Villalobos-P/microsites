@@ -1,25 +1,36 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import FormSection from "../modules/FormSection"
 import Hero from "../modules/Hero"
 import Locations from "../modules/Locations"
 
-const EnterpriseSocialMediaAds = () => {
-  const [content, setContent] = useState(null)
-
-  useEffect(() => {
-    fetch("/.netlify/functions/contactUsContent")
-      .then(res => res.json())
-      .then(data => setContent(data.response))
-  }, [])
+const ContactUs = ({serverData}) => {
+  const {
+    zones: { MainContentZone },
+  } = serverData
 
   return (
     <Layout>
-      {content && <Hero item={content?.zones?.MainContentZone[0]} />}
-      {content && <FormSection item={content?.zones?.MainContentZone[1]} />}
-      {content && <Locations item={content?.zones?.MainContentZone[2]} />}
+      {MainContentZone && <Hero item={MainContentZone[0]} />}
+      {MainContentZone && <FormSection item={MainContentZone[1]} />}
+      {MainContentZone && <Locations item={MainContentZone[2]} />}
     </Layout>
   )
 }
 
-export default EnterpriseSocialMediaAds
+export async function getServerData() {
+  const rest = await fetch(
+    "https://api.aglty.io/800c8044/fetch/en-us/page/121?contentLinkDepth=3&expandAllContentLinks=true",
+    {
+      headers: {
+        APIKEY:
+          "defaultlive.42fb0e27ae9606d57c06565f2369f5de856c3982facea37d12308ff2d453851f",
+      },
+    }
+  )
+  return {
+    props: await rest.json(),
+  }
+}
+
+export default ContactUs

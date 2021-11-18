@@ -18,10 +18,10 @@ const TwoColumnsAndBlackbox = ({ item }) => {
       // </Link>
       <a
         className={`btn ${buttonStyleClass}`}
-        href={customFields?.cTALink.href}
+        href={customFields?.cTALink?.href}
       >
         {" "}
-        {customFields?.cTALink.text}
+        {customFields?.cTALink?.text}
       </a>
     )
   }
@@ -43,7 +43,7 @@ const TwoColumnsAndBlackbox = ({ item }) => {
         className={`btn ${boxButtonStyleClass} cta`}
         onClick={handleScrollToPlans}
       >
-        {customFields.cTAPlansLink.text}
+        {customFields?.cTAPlansLink?.text}
       </button>
     )
   }
