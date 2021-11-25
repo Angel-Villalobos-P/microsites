@@ -2,10 +2,10 @@ import React from "react"
 import "./Hero.scss"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
+import { renderHTML } from "../agility/utils"
 // import Form from "./../components/Form"
 
 const Hero = ({ item }) => {
-
   const customFields = item !== undefined ? item.item.fields : null
 
   if (!customFields) return null
@@ -182,13 +182,19 @@ const Hero = ({ item }) => {
 
             <h1 className="title">{customFields.title}</h1>
 
-            <p
+            {/* <p
               className={`subheadline ${
                 customFields.wrapSubheadline === "true" ? "wrapped" : ""
               }`}
             >
               {customFields.subheadline}
-            </p>
+            </p> */}
+            <div
+              className={`subheadline ${
+                customFields.wrapSubheadline === "true" ? "wrapped" : ""
+              }`}
+              dangerouslySetInnerHTML={renderHTML(customFields.subheadline)}
+            />
 
             <CTA />
           </div>

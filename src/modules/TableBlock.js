@@ -29,7 +29,7 @@ const TableBlock = ({ item }) => {
         }`}
       >
         {imgIcon ? (
-          <img src={imgIcon.url} />
+          <img src={imgIcon.url} alt="img"/>
         ) : (
           // <p className="column-text">{text}</p>
           <div
@@ -138,11 +138,11 @@ const TableBlock = ({ item }) => {
                     return (
                       <td
                         key={i}
-                        className={`btn-cta ${
+                        className={`btn-cta align-middle ${
                           colCta?.fields.highlightColumn==="true" ? "highlight-column" : ""
                         }`}
                       >
-                        <TableCTA color={colCta?.fields.highlightColumn==="true" ? "white":null}/>
+                        <TableCTA color={colCta?.fields.highlightColumn === "true" ? "white" : null}/>
                       </td>
                     )
                   })}

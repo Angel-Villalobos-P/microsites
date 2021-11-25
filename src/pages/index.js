@@ -39,12 +39,11 @@ const IndexPage = ({ serverData }) => {
       {MainContentZone && (
         <TwoColumnsLeftListAndImage item={MainContentZone[3]} />
       )}
-      {MainContentZone && <ContentAndImage item={MainContentZone[4]} />}
-      {MainContentZone && <GridListing item={MainContentZone[5]} />}
-      {MainContentZone && <ContentAndImage item={MainContentZone[6]} />}
-      {MainContentZone && <ClientsAndPartners item={MainContentZone[7]} />}
-      {MainContentZone && <ContentAndImage item={MainContentZone[8]} />}
-      {MainContentZone && <CTAFooter item={MainContentZone[9]} />}
+      {MainContentZone && <GridListing item={MainContentZone[4]} />}
+      {MainContentZone && <ContentAndImage item={MainContentZone[5]} />}
+      {MainContentZone && <ClientsAndPartners item={MainContentZone[6]} />}
+      {MainContentZone && <ContentAndImage item={MainContentZone[7]} />}
+      {MainContentZone && <CTAFooter item={MainContentZone[8]} />}
     </Layout>
   )
 }

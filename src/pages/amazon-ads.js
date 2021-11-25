@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import CTAFooter from "../modules/CTAFooter"
 import Hero from "../modules/Hero"
 import MicrositeNavbar from "../modules/MicrositeNavbar"
+import TableBlock from "../modules/TableBlock"
 import TwoColumnsAndBlackbox from "../modules/TwoColumnsAndBlackbox"
 import TwoColumnsLeftContent from "../modules/TwoColumnsLeftContent"
 
@@ -16,7 +17,8 @@ const AmazonAds = ({serverData}) => {
       {MainContentZone && <MicrositeNavbar item={MainContentZone[1]} />}
       {MainContentZone && <TwoColumnsAndBlackbox item={MainContentZone[2]} />}
       {MainContentZone && <TwoColumnsLeftContent item={MainContentZone[3]} />}
-      {MainContentZone && <CTAFooter item={MainContentZone[4]} />}
+      {MainContentZone && <TableBlock item={MainContentZone[4]} />}
+      {MainContentZone && <CTAFooter item={MainContentZone[5]} />}
     </Layout>
   )
 }

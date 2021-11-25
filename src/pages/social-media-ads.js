@@ -5,22 +5,21 @@ import Hero from "../modules/Hero"
 import MicrositeNavbar from "../modules/MicrositeNavbar"
 import TwoColumnsAndBlackbox from "../modules/TwoColumnsAndBlackbox"
 import TwoColumnsLeftContent from "../modules/TwoColumnsLeftContent"
+import TableBlock from "../modules/TableBlock"
 
 const SocialMediaAds = ({ serverData }) => {
-
-  const { zones: { MainContentZone } } = serverData
+  const {
+    zones: { MainContentZone },
+  } = serverData
 
   return (
     <Layout>
       {MainContentZone && <Hero item={MainContentZone[0]} />}
       {MainContentZone && <MicrositeNavbar item={MainContentZone[1]} />}
-      {MainContentZone && (
-        <TwoColumnsAndBlackbox item={MainContentZone[2]} />
-      )}
-      {MainContentZone && (
-        <TwoColumnsLeftContent item={MainContentZone[3]} />
-      )}
-      {MainContentZone && <CTAFooter item={MainContentZone[4]} />}
+      {MainContentZone && <TwoColumnsAndBlackbox item={MainContentZone[2]} />}
+      {MainContentZone && <TwoColumnsLeftContent item={MainContentZone[3]} />}
+      {MainContentZone && <TableBlock item={MainContentZone[4]} />}
+      {MainContentZone && <CTAFooter item={MainContentZone[5]} />}
     </Layout>
   )
 }

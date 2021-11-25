@@ -55,16 +55,12 @@ const Subscribe = ({
     <Fragment>
       <form className="subscribe-form" onSubmit={handleSubmit(onSubmit)}>
         <div
-          // className={`float-control form-control ${isDirty ? "is-dirty" : ""}`}
           className={`float-control ${isDirty ? "is-dirty" : ""}`}
         >
           <input
             name="name"
             className="dark-bg"
             placeholder=""
-            // ref={register({
-            //   required: "Required",
-            // })}
             {...register("name", {
               required: true,
             })}
@@ -72,7 +68,6 @@ const Subscribe = ({
           <label className="label float-label"> Name </label>
         </div>
         <div
-          // className={`float-control form-control ${isDirty ? "is-dirty" : ""}`}
           className={`float-control ${isDirty ? "is-dirty" : ""}`}
         >
           <input
@@ -80,13 +75,6 @@ const Subscribe = ({
             className="dark-bg"
             placeholder={placeholder}
             title="Enter your email and name to subscribe to our newsletter"
-            // ref={register({
-            //   required: "Required",
-            //   pattern: {
-            //     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            //     message: "Invalid email address",
-            //   },
-            // })}
             {...register("email", {
               required: true,
               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -96,7 +84,6 @@ const Subscribe = ({
           <label className="label float-label"> {label} </label>
         </div>
         {errors?.email && errors?.email.message}
-        {/* <div className="form-control text-center"> */}
         <div className="text-center">
           <button className="btn btn-subscribe" type="submit">
             {btnTxt}
@@ -139,12 +126,6 @@ const Subscribe = ({
                       target="_blank"
                       aria-label="Pixel506 Facebook page (Opens a new Window)."
                     >
-                      {/* <SVG
-                        fill={"#000"}
-                        name={"facebook"}
-                        width={40}
-                        height={40}
-                      ></SVG> */}
                       <Facebook />
                     </a>
                   </li>
@@ -155,12 +136,6 @@ const Subscribe = ({
                       target="_blank"
                       aria-label="Pixel506 Instagram page (Opens a new Window)."
                     >
-                      {/* <SVG
-                        fill={"#FFF"}
-                        name={"instagram"}
-                        width={40}
-                        height={40}
-                      ></SVG> */}
                       <Instagram />
                     </a>
                   </li>
@@ -171,12 +146,6 @@ const Subscribe = ({
                       target="_blank"
                       aria-label="Pixel506 Youtube page (Opens a new Window)."
                     >
-                      {/* <SVG
-                        fill={"#FFF"}
-                        name={"youtube"}
-                        width={40}
-                        height={40}
-                      ></SVG> */}
                       <Youtube />
                     </a>
                   </li>
@@ -187,12 +156,6 @@ const Subscribe = ({
                       target="_blank"
                       aria-label="Pixel506 Twitter page (Opens a new Window)."
                     >
-                      {/* <SVG
-                        fill={"#FFF"}
-                        name={"twitter"}
-                        width={40}
-                        height={40}
-                      ></SVG> */}
                       <Twitter />
                     </a>
                   </li>
@@ -203,12 +166,6 @@ const Subscribe = ({
                       target="_blank"
                       aria-label="Pixel506 LinkedIn page (Opens a new Window)."
                     >
-                      {/* <SVG
-                        fill={"#FFF"}
-                        name={"linked-in"}
-                        width={40}
-                        height={40}
-                      ></SVG> */}
                       <LinkedIN />
                     </a>
                   </li>

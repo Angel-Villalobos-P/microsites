@@ -134,16 +134,16 @@ const GlobalMicrositeFooter = () => {
     <footer>
       <div className="container-fluid">
         <div className="row justify-content-sm-center">
-          <div className="col-12 col-md-6 d-flex flex-column mb-sm-5">
+          <div className="col-12 col-md-6 d-flex flex-column mb-sm-5 justify-content-center">
             <div className="d-flex w-100 justify-content-center justify-content-sm-start order-1 order-sm-3">
               <LogoSlogan />
             </div>
-            <p className="subscribe-title order-sm-1 order-2 mb-sm-4">
+            {/* <p className="subscribe-title order-sm-1 order-2 mb-sm-4">
               {customFields?.subscribeTitle}
-            </p>
-            <div className="subscribe-wrapper order-3 order-sm-2 mb-sm-4">
+            </p> */}
+            {/* <div className="subscribe-wrapper order-3 order-sm-2 mb-sm-4">
               <Subscribe {...subscribeFormData} />
-            </div>
+            </div> */}
           </div>
           <div className="col-12 col-md-6 d-flex flex-column justify-content-sm-end align-items-sm-end mb-sm-5">
             <p className="info-details">{customFields?.featuredEmailAddress}</p>
