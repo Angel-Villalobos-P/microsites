@@ -21,16 +21,6 @@ const IndexPage = ({ serverData }) => {
 
   return (
     <Layout>
-      {/* {content && <Hero item={content?.zones?.MainContentZone[0]} />}
-      {content && <ContentAndImage item={content?.zones?.MainContentZone[1]} />}
-      {content && <TwoColumnsLeftListAndImage item={content?.zones?.MainContentZone[2]} />}
-      {content && <TwoColumnsLeftListAndImage item={content?.zones?.MainContentZone[3]} />}
-      {content && <ContentAndImage item={content?.zones?.MainContentZone[4]} />}
-      {content && <GridListing item={content?.zones?.MainContentZone[5]} />}
-      {content && <ContentAndImage item={content?.zones?.MainContentZone[6]} />}
-      {content && <ClientsAndPartners item={content?.zones?.MainContentZone[7]} />}
-      {content && <ContentAndImage item={content?.zones?.MainContentZone[8]} />}
-      {content && <CTAFooter item={content?.zones?.MainContentZone[9]} />} */}
       {MainContentZone && <Hero item={MainContentZone[0]} />}
       {MainContentZone && <ContentAndImage item={MainContentZone[1]} />}
       {MainContentZone && (
