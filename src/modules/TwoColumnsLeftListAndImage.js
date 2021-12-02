@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./TwoColumnsLeftListAndImage.scss"
+import { renderHTML } from "../agility/utils"
 
 const TwoColumnsLeftListAndImage = ({ item }) => {
   const customFields = item !== undefined ? item.item.fields : null
@@ -34,7 +35,11 @@ const TwoColumnsLeftListAndImage = ({ item }) => {
             <div className="list-wraper">
               <span className="headline-line"></span>
               <p className="left-text-title">{customFields?.title}</p>
-              <p className="left-textBlock">{customFields?.textblock}</p>
+              {/* <p className="left-textBlock">{customFields?.textblock}</p> */}
+              <div
+                className="left-textBlock"
+                dangerouslySetInnerHTML={renderHTML(customFields?.textblock)}
+              />
               {customFields?.image ? (
                 <ul>
                   {listItems.map((item, index) => {

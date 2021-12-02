@@ -12,9 +12,9 @@ const TwoColumnsLeftContent = ({ item }) => {
     return (
       <Link
         className={`btn ${buttonStyleClass}`}
-        to={customFields?.cTALink.href}
+        to={customFields?.cTALink?.href}
       >
-        {customFields?.cTALink.text}
+        {customFields?.cTALink?.text}
       </Link>
     )
   }

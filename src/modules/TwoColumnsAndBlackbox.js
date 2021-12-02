@@ -1,7 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
-import { renderHTML } from "../agility/utils"
 import "./TwoColumnsAndBlackbox.scss"
+import { renderHTML } from "../agility/utils"
 
 const TwoColumnsAndBlackbox = ({ item }) => {
   const customFields = item !== undefined ? item.item.fields : null
@@ -10,18 +9,12 @@ const TwoColumnsAndBlackbox = ({ item }) => {
     const buttonStyleClass = customFields?.buttonStyle?.fields.cSSClass
 
     return (
-      // <Link
-      //   className={`btn ${buttonStyleClass}`}
-      //   to={customFields?.cTALink.href}
-      // >
-      //   {customFields?.cTALink.text}
-      // </Link>
       <a
         className={`btn ${buttonStyleClass}`}
-        href={customFields?.cTALink.href}
+        href={customFields?.cTALink?.href}
       >
         {" "}
-        {customFields?.cTALink.text}
+        {customFields?.cTALink?.text}
       </a>
     )
   }
@@ -43,7 +36,7 @@ const TwoColumnsAndBlackbox = ({ item }) => {
         className={`btn ${boxButtonStyleClass} cta`}
         onClick={handleScrollToPlans}
       >
-        {customFields.cTAPlansLink.text}
+        {customFields?.cTAPlansLink?.text}
       </button>
     )
   }

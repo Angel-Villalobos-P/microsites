@@ -71,8 +71,6 @@ const GridListing = ({ item }) => {
   const GridItem = ({ props }) => {
     const lgClass = items.length > 4 ? "" : "col-lg-3"
 
-    console.log(items.length>4);
-
     return (
       // <div className={"col-12 col-sm-6 col-md-4 col-lg-3 grid-item"}>
       <div className={`col-12 col-sm-6 col-md-4 ${lgClass} grid-item`}>

@@ -102,6 +102,12 @@ $grid-listing-bg: #f6f6f6;
       letter-spacing: 0.04em;
       color: $dark-grey;
       font-weight: 300;
+      
+      strong {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 150%;
+      }
     }
   }
 }
