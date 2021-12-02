@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import CTAFooter from "../modules/CTAFooter"
 import Hero from "../modules/Hero"
 import MicrositeNavbar from "../modules/MicrositeNavbar"
-import TableBlock from "../modules/TableBlock"
 import TwoColumnsAndBlackbox from "../modules/TwoColumnsAndBlackbox"
+import TableBlock from "../modules/TableBlock"
 import TwoColumnsLeftContent from "../modules/TwoColumnsLeftContent"
 
 const EnterprisePPC = ({serverData}) => {
-  const [content, setContent] = useState(null)
+  // const [content, setContent] = useState(null)
 
-  useEffect(() => {
-    fetch("/.netlify/functions/enterpriseContent")
-      .then(res => res.json())
-      .then(data => setContent(data.response))
-  }, [])
+  // useEffect(() => {
+  //   fetch("/.netlify/functions/enterpriseContent")
+  //     .then(res => res.json())
+  //     .then(data => setContent(data.response))
+  // }, [])
 
   const {
     zones: { MainContentZone },

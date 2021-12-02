@@ -56,7 +56,7 @@ const GlobalMicrositeHeader = () => {
                   {/* <Link to="#">Reviews</Link> */}
                   <Link to="/contact-us">Contact info</Link>
                   <Link to="/contact-us">About us</Link>
-                  <Link to="/careers">Careers</Link>
+                  <a href="https://pixel506.com/careers">Careers</a>
                   <Link className="movil" to="/ppc-plans">
                     PPC Plans
                   </Link>

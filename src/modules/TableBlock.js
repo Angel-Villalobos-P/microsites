@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { renderHTML } from "../agility/utils"
 import "./TableBlock.scss"
+import { renderHTML } from "../agility/utils"
 
 const TableBlock = ({ item }) => {
   const customFields = item !== undefined ? item.item.fields : null
