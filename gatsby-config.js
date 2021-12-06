@@ -88,74 +88,8 @@ module.exports = {
         },
       },
     },
-    // ============ Get content ============
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     typeName: "Test",
-    //     fieldName: "test",
-    //     url: "https://api.github.com/graphql",
-    //     // A `fetch`-compatible API to use when making requests.
-    //     fetch: (uri, options = {}) =>
-    //       fetch(uri, { ...options, headers: sign(options.headers) }),
-    //   },
-    // },
-    //Simple config, passing URL
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     // Arbitrary name for the remote schema Query type
-    //     typeName: "MICROSITES",
-    //     // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-    //     fieldName: "microsites",
-    //     // Url to query from
-    //     // url: `https://api.aglty.io/${agilityConfig.guid}/fetch/en-us/item/1451`,
-    //     // url: `https://800c8044-api.agilitycms.cloud/fetch/en-us/page/111`,
-    //     // url: `https://api.aglty.io/v1/800c8044/fetch/en-us/graphql`,
-    //     url: `https://api.aglty.io/v1/800c8044/fetch/en-us/graphql`,
-    //     headers: {
-    //       APIKEY:
-    //         "defaultlive.42fb0e27ae9606d57c06565f2369f5de856c3982facea37d12308ff2d453851f",
-    //     },
-    //   },
-    // },
 
-    //================> test <===================
-    // {
-    //   //the name of the plugin
-    //   resolve: "@agility/gatsby-source-agilitycms",
-    //   //the options for our plugin
-    //   options: {
-    //     //your Agility Content Fetch API Guid
-    //     guid: agilityConfig.guid,
-    //     //your Agility Content Fetch API Key
-    //     apiKey: agilityConfig.apiKey,
-    //     //set this to true if you are using the preview API Key
-    //     isPreview: agilityConfig.isPreview,
-    //     //set this to true to see expanded traces in the build logs
-    //     debug: false,
-    //     //the languages you want to source content for
-    //     languages: [
-    //       {
-    //         // The name of the language code
-    //         name: "English",
-    //         // The actual language code set in Agility CMS
-    //         code: "en-us",
-    //         // The name to be used in the URL path that represents the current language
-    //         path: "en",
-    //       },
-    //     ],
-    //     // The channels you want to include
-    //     channels: [
-    //       {
-    //         // The reference name for the website channel as it is defined in Agility CMS
-    //         referenceName: "website",
-    //       },
-    //     ],
-    //     //the page template that will be used to render Agility CMS pages
-    //     masterPageTemplate: "./src/AgilityPage.js",
-    //   },
-    // },
+    
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
