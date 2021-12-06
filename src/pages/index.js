@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import ClientsAndPartners from "../modules/ClientsAndPartners"
 import ContentAndImage from "../modules/ContentAndImage"
@@ -8,13 +8,6 @@ import Hero from "../modules/Hero"
 import TwoColumnsLeftListAndImage from "../modules/TwoColumnsLeftListAndImage"
 
 const IndexPage = ({ serverData }) => {
-  // const [content, setContent] = useState({})
-
-  // useEffect(() => {
-  //   fetch("/.netlify/functions/content")
-  //     .then(res => res.json())
-  //     .then(data => setContent(data.response))
-  // }, [])
   const {
     zones: { MainContentZone },
   } = serverData

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import Subscribe from "./Subscribe"
 import "./GlobalMicrositeFooter.scss"
 import LogoSlogan from "../images/logo-slogan.svg"
 import Facebook from "../images/Facebook.svg"
@@ -14,19 +13,7 @@ import LinkedIN from "../images/LinkedIN.svg"
  * @function GlobalFooter
  */
 const GlobalMicrositeFooter = () => {
-  const [content, setcontent] = useState({})
 
-  useEffect(() => {
-    fetch("/.netlify/functions/footerContent")
-      .then(res => res.json())
-      .then(data => setcontent(data.response))
-  }, [])
-
-  const customFields = content?.fields
-  const subscribeFormData = {
-    label: customFields?.subscribeFormLabel,
-    btnTxt: customFields?.subscribeSubmitButtonText,
-  }
   const route = {
     hash: "",
     host: "performance.pixel506.com",
@@ -146,9 +133,9 @@ const GlobalMicrositeFooter = () => {
             </div> */}
           </div>
           <div className="col-12 col-md-6 d-flex flex-column justify-content-sm-end align-items-sm-end mb-sm-5">
-            <p className="info-details">{customFields?.featuredEmailAddress}</p>
-            <p className="info-details">{customFields?.contactNumberOne}</p>
-            <p className="info-details">{customFields?.contactNumberTwo}</p>
+            <a className="info-details" href="mailto:contact@pixel506.com">contact@pixel506.com</a>
+            <a className="info-details" href="tel:+16462846828">+1 (646) 284 6828</a>
+            <a className="info-details" href="tel:+16462846818">+1 (646) 284 6818</a>
             <nav className="d-sm-none">
               <ul className="mobile-nav">
                 <li
@@ -172,9 +159,9 @@ const GlobalMicrositeFooter = () => {
             <ul className="social-links mt-sm-3">
               <li className="social-links__item">
                 <a
-                  href={customFields?.facebookUrl?.href}
+                  href="https://www.facebook.com/pixel506"
                   rel="noopener"
-                  target={customFields?.facebookUrl?.target}
+                  // target={customFields?.facebookUrl?.target}
                   aria-label="Pixel506 Facebook page (Opens a new Window)."
                 >
                   <Facebook />
@@ -182,9 +169,9 @@ const GlobalMicrositeFooter = () => {
               </li>
               <li className="social-links__item">
                 <a
-                  href={customFields?.instagramUrl?.href}
-                  rel="noopener"
-                  target={customFields?.instagramUrl?.target}
+                  href="https://www.instagram.com/pixel506official/"
+                  // rel="noopener"
+                  // target={customFields?.instagramUrl?.target}
                   aria-label="Pixel506 Instagram page (Opens a new Window)."
                 >
                   <Instagram />
@@ -192,9 +179,9 @@ const GlobalMicrositeFooter = () => {
               </li>
               <li className="social-links__item">
                 <a
-                  href={customFields?.youtubeUrl?.href}
+                  href="https://www.youtube.com/channel/UCGaR5CY3HA_2CcGkhYbZQ5Q/featured"
                   rel="noopener"
-                  target={customFields?.youtubeUrl?.target}
+                  // target={customFields?.youtubeUrl?.target}
                   aria-label="Pixel506 Youtube page (Opens a new Window)."
                 >
                   <Youtube />
@@ -202,9 +189,9 @@ const GlobalMicrositeFooter = () => {
               </li>
               <li className="social-links__item">
                 <a
-                  href={customFields?.twitterUrl?.href}
+                  href="https://twitter.com/Pixel506"
                   rel="noopener"
-                  target={customFields?.twitterUrl?.target}
+                  // target={customFields?.twitterUrl?.target}
                   aria-label="Pixel506 Twitter page (Opens a new Window)."
                 >
                   <Twitter />
@@ -212,9 +199,9 @@ const GlobalMicrositeFooter = () => {
               </li>
               <li className="social-links__item">
                 <a
-                  href={customFields?.linkedInUrl?.href}
+                  href="https://www.linkedin.com/company/pixel506/"
                   rel="noopener"
-                  target={customFields?.linkedInUrl?.target}
+                  // target={customFields?.linkedInUrl?.target}
                   aria-label="Pixel506 LinkedIn page (Opens a new Window)."
                 >
                   <LinkedIN />
@@ -222,14 +209,6 @@ const GlobalMicrositeFooter = () => {
               </li>
             </ul>
           </div>
-          {/* <nav
-            aria-label="Footer navigation."
-            className="d-none d-md-flex col-lg-8 mb-sm-5"
-          >
-            <ul className="nav-links w-100 d-flex justify-content-between align-items-center">
-              {renderLinks()}
-            </ul>
-          </nav> */}
           <div className="col-12 col-sm-12">
             <p className="copyright">
               &#169; PIXEL506, LLC. ALL RIGHTS RESERVED
