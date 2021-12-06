@@ -14,6 +14,7 @@ const IndexPage = ({ serverData }) => {
 
   return (
     <Layout>
+      <p>Texto</p>
       {MainContentZone && <Hero item={MainContentZone[0]} />}
       {MainContentZone && <ContentAndImage item={MainContentZone[1]} />}
       {MainContentZone && (
