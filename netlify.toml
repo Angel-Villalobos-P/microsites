@@ -3,3 +3,4 @@ package = "@netlify/plugin-gatsby"
 
 [build]
 publish = 'public'
+NODE_ENV = "14.18.1"
