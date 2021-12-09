@@ -26,7 +26,7 @@ const IndexPage = ({ serverData }) => {
       {MainContentZone && <ContentAndImage item={MainContentZone[5]} />}
       {MainContentZone && <ClientsAndPartners item={MainContentZone[6]} />}
       {MainContentZone && <ContentAndImage item={MainContentZone[7]} />}
-      {MainContentZone && <CTAFooter item={MainContentZone[8]} />}
+      {MainContentZone && <CTAFooter item={MainContentZone[8]} />}  
     </Layout>
   )
 }
