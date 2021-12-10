@@ -8,52 +8,58 @@ import Hero from "../modules/Hero"
 import TwoColumnsLeftListAndImage from "../modules/TwoColumnsLeftListAndImage"
 
 const IndexPage = ({ serverData }) => {
-  const {
-    zones: { MainContentZone },
-  } = serverData
-
-  return (
-    <Layout>
-      {MainContentZone && <Hero item={MainContentZone[0]} />}
-      {MainContentZone && <ContentAndImage item={MainContentZone[1]} />}
-      {MainContentZone && (
-        <TwoColumnsLeftListAndImage item={MainContentZone[2]} />
-      )}
-      {MainContentZone && (
-        <TwoColumnsLeftListAndImage item={MainContentZone[3]} />
-      )}
-      {MainContentZone && <GridListing item={MainContentZone[4]} />}
-      {MainContentZone && <ContentAndImage item={MainContentZone[5]} />}
-      {MainContentZone && <ClientsAndPartners item={MainContentZone[6]} />}
-      {MainContentZone && <ContentAndImage item={MainContentZone[7]} />}
-      {MainContentZone && <CTAFooter item={MainContentZone[8]} />}  
-    </Layout>
-  )
+  // const {
+  //   zones: { MainContentZone },
+  // } = serverData
+  
+    return ( 
+      <>
+        <h1>SSR Page - HOME</h1>
+        <img style={{ width: "300px" }} alt="random img" src={serverData.message} />
+        <p>Testing ssr page</p>
+      </>
+    );
 }
 
 export default IndexPage
 
-// const API_KEY = process.env.AGILITY_API_KEY
 
-const agilityConfig = {
-  guid: process.env.AGILITY_GUID,
-  apiKey: process.env.AGILITY_API_KEY,
-  isPreview: process.env.AGILITY_API_ISPREVIEW === "true",
-}
+// const agilityConfig = {
+//   guid: process.env.AGILITY_GUID,
+//   apiKey: process.env.AGILITY_API_KEY,
+//   isPreview: process.env.AGILITY_API_ISPREVIEW === "true",
+// }
 
-// console.log(API_KEY);
 export async function getServerData() {
-  const rest = await fetch(
-    "https://api.aglty.io/800c8044/fetch/en-us/page/111",
-    {
-      headers: {
-        APIKEY: //agilityConfig.apiKey,
-        // AGILITY_API_ISPREVIEW: agilityConfig.isPreview
-          "defaultlive.42fb0e27ae9606d57c06565f2369f5de856c3982facea37d12308ff2d453851f",
-      },
+  try {
+    const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
+    if (!res.ok) {
+      throw new Error(`Response failed`)
     }
-  )
-  return {
-    props: await rest.json(),
+    return {
+      props: await res.json(),
+    }
+  } catch (error) {
+    return {
+      headers: {
+        status: 500,
+      },
+      props: {},
+    }
   }
 }
+
+// export async function getServerData() {
+//   const rest = await fetch(
+//     `https://api.aglty.io/${agilityConfig.guid}/fetch/en-us/page/111`,
+//     {
+//       headers: {
+//         APIKEY: agilityConfig.apiKey,
+//       },
+//     }
+//   )
+//   return {
+//     props: await rest.json(),
+//   }
+// }
+
