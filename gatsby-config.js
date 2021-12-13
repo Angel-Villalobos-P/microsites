@@ -24,12 +24,12 @@ module.exports = {
     "gatsby-plugin-react-svg",
     `gatsby-plugin-image`,
     'gatsby-plugin-netlify',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
     },
     // `gatsby-transformer-sharp`,
     // `gatsby-plugin-sharp`,
@@ -91,21 +91,21 @@ module.exports = {
     },
 
     
-    `gatsby-transformer-json`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `./src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `./src/data`,
-        ignore: [`**/\.*`],
-      },
-    },
+    // `gatsby-transformer-json`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `./src/images/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `data`,
+    //     path: `./src/data`,
+    //     ignore: [`**/\.*`],
+    //   },
+    // },
   ],
 }
