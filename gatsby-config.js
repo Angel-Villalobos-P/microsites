@@ -21,8 +21,8 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-preload-fonts`,
-    "gatsby-plugin-react-svg",
-    `gatsby-plugin-image`,
+    // "gatsby-plugin-react-svg",
+    // `gatsby-plugin-image`,
     'gatsby-plugin-netlify',
     // {
     //   resolve: `gatsby-source-filesystem`,
