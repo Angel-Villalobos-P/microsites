@@ -1,0 +1,72 @@
+@import "utils";
+
+.not-found {
+  color: $white;
+  padding: 3.5rem 0 0;
+
+  &-wrapper {
+    padding: 4.5rem 0.5rem;
+  }
+
+  &-container {
+    @media #{$md} {
+      max-width: 750px;
+      margin-left: 5%;
+    }
+  }
+
+  .circles-wrapper {
+    border-top: 11px solid $white;
+    margin-bottom: 2rem;
+  }
+
+  .pink-circle {
+    margin: 0 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50%;
+    font-size: 56px;
+    line-height: 100%;
+    background-color: $pixel-pink;
+    font-weight: bold;
+    @media #{$md} {
+      padding: 1.5rem 2.5rem 1rem;
+      line-height: 0.9;
+      font-size: 104px;
+    }
+  }
+
+  .title,
+  .subheadline,
+  .cta-text {
+    @media #{$xs-only} {
+      text-align: center;
+    }
+  }
+
+  .title {
+    margin-top: 0.5rem;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 2.5rem;
+
+    @media #{$md} {
+      font-size: 80px;
+    }
+  }
+
+  .subheadline {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-text {
+    font-family: "Bodoni";
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+  }
+}
