@@ -31,6 +31,5 @@ exports.createPages = async ({ actions: { createPage } }) => {
     path: "/",
     component: require.resolve("./src/templates/create-page.js"),
     context: { data },
-    defer: true,
   })
 }
