@@ -28,7 +28,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
   const data = await getPageData()
 
   createPage({
-    path: "/templates/create-page",
+    path: "/",
     component: require.resolve("./src/templates/create-page.js"),
     context: { data },
     defer: true,
