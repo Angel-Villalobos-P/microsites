@@ -11,7 +11,7 @@ const createPage = ({ pageContext: { data } }) => {
   return (
     <div>
       {MainContentZone && <Hero item={MainContentZone[0]} />}
-      <p>hola</p>
+      <p>hola mundo</p>
     </div>
   )
 }
