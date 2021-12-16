@@ -23,7 +23,7 @@ module.exports = {
     `gatsby-plugin-preload-fonts`,
     // "gatsby-plugin-react-svg",
     // `gatsby-plugin-image`,
-    'gatsby-plugin-netlify',
+    // 'gatsby-plugin-netlify',
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
